@@ -79,6 +79,14 @@ cacheSolve <- function(x, ...) {
 	data <- x$get()
   
 	## perform calculation of the inverse matrix
+	## Based on the definition of solve(...), the 2nd parameter may
+	## change the value returned by solve. With only a single parameter,
+	## solve() assumes the 2nd parameter to be the identity matrix and
+	## solve will return the inverse of the matrix (1st parameter).
+	## If we had use solve(data, ...), we need to keep track of the 
+	## ... values so that we can recalculate the inverse when the 2nd
+	## parameter is different.
+
 	m <- solve(data)
   
 	## store the value of the inverse of matrix
