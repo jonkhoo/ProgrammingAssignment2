@@ -1,4 +1,3 @@
-
 ## cacheMatrix.R contains 2 functions, makeCacheMatrix and cacheSolve
 ## makeCacheMatrix is used to create a list of functions to set and retrieve 
 ## cached matrix values.
